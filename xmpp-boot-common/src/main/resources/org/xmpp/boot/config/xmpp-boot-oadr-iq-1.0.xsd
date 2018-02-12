@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://boot.xmpp.org/schema/integration/oadr-iq"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:beans="http://www.springframework.org/schema/beans"
+      xmlns:tool="http://www.springframework.org/schema/tool"
+      xmlns:integration="http://www.springframework.org/schema/integration"
+      xmlns:int-xmpp="http://www.springframework.org/schema/integration/xmpp"
+      targetNamespace="http://boot.xmpp.org/schema/integration/oadr-iq"
+      elementFormDefault="qualified"
+      attributeFormDefault="unqualified">
+
+  <xsd:import namespace="http://www.springframework.org/schema/beans"/>
+  <xsd:import namespace="http://www.springframework.org/schema/tool"/>
+  <xsd:import namespace="http://www.springframework.org/schema/integration"
+        schemaLocation="http://www.springframework.org/schema/integration/spring-integration-5.0.xsd"/>
+  <xsd:import namespace="http://www.springframework.org/schema/integration/xmpp"
+        schemaLocation="http://www.springframework.org/schema/integration/xmpp/spring-integration-xmpp-5.0.xsd"/>
+
+  <xsd:element name="oadr-iq-inbound-channel-adapter">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="int-xmpp:xmppInboundAdapterType">
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="oadr-iq-outbound-channel-adapter">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="int-xmpp:xmppOutboundAdapterType">
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>
